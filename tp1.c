@@ -31,7 +31,7 @@ int main()
      }  
      printf("\n\n");
     //Afichage des lignes d'indice impair:
-     for(i = 2 ; i < 5 ; i++ )
+     for(i = 1 ; i < 5 ; i += 2 )
      {
          for(j = 0 ; j < 5 ; j ++)
            printf("%c\t",T[i][j]);  
