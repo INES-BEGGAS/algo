@@ -10,7 +10,8 @@ int main()
         {'2','9','t','m','k'}
     };
     int M[4][4] , i , j , n = 0 ;
-    int X ;    
+    int X ;  
+    
     //Afichage de la matrice T:
     for(i = 0 ; i < 5 ; i++)
     {
@@ -19,8 +20,8 @@ int main()
                    
             printf("%c\t",T[i][j]);
             
-     }  
-        printf("\n\n");
+     }
+    printf("\n\n");
     //Afichage des lignes d'indice pair:
      for(i = 0 ; i < 5 ; i += 2)
      {
