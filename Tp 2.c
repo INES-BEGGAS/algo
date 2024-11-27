@@ -12,6 +12,7 @@ char *ChargerChaine(int N)
     }  
     return chaine;      
 }
+
 int Longueur(char *ch)
 {
     int i = 0;
@@ -22,6 +23,7 @@ int Longueur(char *ch)
     }    
     return i;
 }
+
 void InverserTab(char Tab[], char T[], int m)
 {
     int i;
@@ -29,6 +31,7 @@ void InverserTab(char Tab[], char T[], int m)
         T[i] = Tab[m-1-i];
     T[m] = '\0';
 }
+
 void ChargerTab(char *p, char Tab[])
 {
     int i = 0;
@@ -40,6 +43,7 @@ void ChargerTab(char *p, char Tab[])
     }    
     Tab[i] = '\0';
 }
+
 void AfficherTab(char Tab[], int m)
 {
     printf("%s\n",Tab);
@@ -49,7 +53,7 @@ int main()
 {
     char *ch;
     int n;
-    printf("Veuillez saisir la taille maximale de la         chaine:\n");
+    printf("Veuillez saisir la taille maximale de la chaine : \n");
     scanf("%d", &n);
     ch = ChargerChaine(n);
     printf ("La chaine est : %s\n",ch);
