@@ -4,11 +4,15 @@
 
 char *ChargerChaine(int N)
 {
-   char *chaine = (char *) malloc(N * sizeof(char));
+    char *chaine = (char *) malloc(N * sizeof(char));
     if (chaine != NULL)
     {
-        printf("Enter a string : \n");    
+        printf("\n Enter a string : \n");    
         scanf("%s", chaine);
+    }else 
+    {
+       printf("échec d'allocation de mémoire !!\n");
+       exit(1);
     }  
     return chaine;      
 }
@@ -46,25 +50,42 @@ void ChargerTab(char *p, char Tab[])
 
 void AfficherTab(char Tab[], int m)
 {
-    printf("%s\n",Tab);
+    printf(" \n %s \n ",Tab);
 }
 
 int main()
 {
     char *ch;
     int n;
-    printf("Veuillez saisir la taille maximale de la chaine : \n");
+    printf(" Veuillez saisir la taille maximale de la chaine : \t");
     scanf("%d", &n);
+    //****************************************
+    printf("\n ******* ChargerChaine *******\n");
     ch = ChargerChaine(n);
-    printf ("La chaine est : %s\n",ch);
+    printf ("\n La chaine est : %s\n",ch);
+    //****************************************
     int m = Longueur(ch);
-    printf("La longueur de la chaine est : %d \n",m);
+    printf("\n La longueur de la chaine est : %d \n",m);
     char Tab[m], T[m];
+    //****************************************
+    printf("\n ******* ChargerTab ******* \n");
     ChargerTab(ch, Tab);
     AfficherTab(Tab, m);
+    //****************************************
+    printf("\n ******* InverserTab ******* \n");
     InverserTab(Tab, T, m);
     AfficherTab(T, m);
-
+    //****************************************
     free(ch);
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
