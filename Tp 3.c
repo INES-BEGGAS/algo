@@ -16,7 +16,6 @@ element *creerListe()
 element *chargerListe(int Tab[],int N,element *liste)
 {
   int i = 0;
-  element *tete = liste; 
   while( N > i)
   {
     element *P = malloc(sizeof(element));
